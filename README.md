@@ -70,11 +70,11 @@ Wide state
 bootstrap class
 ```html
 <form>
-  <switch ng-model="enabled" wide="true" class="primary"></switch>
-  <switch ng-model="enabled" wide="true" class="info"></switch>
-  <switch ng-model="enabled" wide="true" class="success"></switch>
-  <switch ng-model="enabled" wide="true" class="warning"></switch>
-  <switch ng-model="enabled" wide="true" class="danger"></switch>
+  <switch ng-model="enabled" class="primary"></switch>
+  <switch ng-model="enabled" class="info"></switch>
+  <switch ng-model="enabled" class="success"></switch>
+  <switch ng-model="enabled" class="warning"></switch>
+  <switch ng-model="enabled" class="danger"></switch>
   <br>{{ enabled }}
 </form>
 ```
@@ -84,16 +84,16 @@ bootstrap class
 You can completely change the design. All the magic is hidden inside two CSS classes.
 
 ```css
-.switch {
+.ui-switch {
   /* frame */
 }
-.switch small {
+.ui-switch small {
   /* button */
 }
-.switch.checked {
+.ui-switch.checked {
   /* frame when enabled */
 }
-.switch.checked small {
+.ui-switch.checked small {
   /* button when enabled */
 }
 ```
