@@ -6,11 +6,12 @@ angular.module('uiSwitch', [])
   , replace: true
   , transclude: true
   , template: function(element, attrs) {
+      var wide = typeof(attrs.wide) == 'undefined' ? (attrs.off ? true : false) : attrs.wide;
       var html = '';
       html += '<span';
-      html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
+      html +=   ' class="ui-switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
       html +=   attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
-      html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ' }"';
+      html += ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ', wide:' + wide + ' }"';
       html +=   '>';
       html +=   '<small></small>';
       html +=   '<input type="checkbox"';
@@ -18,7 +19,7 @@ angular.module('uiSwitch', [])
       html +=     attrs.name ? ' name="' + attrs.name + '"' : '';
       html +=     attrs.ngModel ? ' ng-model="' + attrs.ngModel + '"' : '';
       html +=     ' style="display:none" />';
-      html +=     '<span class="switch-text">'; /*adding new container for switch text*/
+      html +=     '<span class="ui-switch-text">'; /*adding new container for switch text*/
       html +=     attrs.on ? '<span class="on">'+attrs.on+'</span>' : ''; /*switch text on value set by user in directive html markup*/
       html +=     attrs.off ? '<span class="off">'+attrs.off + '</span>' : ' ';  /*switch text off value set by user in directive html markup*/
       html += '</span>';
