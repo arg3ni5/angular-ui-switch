@@ -12,7 +12,7 @@
 <body>
 
   <form data-ng-controller="MyController">
-    <switch name="enabled" ng-model="enabled" ng-change="changeCallback"></switch>
+    <switch name="enabled" ng-model="enabled" ng-change="changeCallback" class="green"></switch>
     <p>
         <button ng-click="enabled=!enabled">Toggle</button>
     </p>
@@ -21,7 +21,7 @@
     </p>
      <!--Examples of using switch text on/off values.  These values can be anything.  First example shows basic on/off-->
 
-    <switch name="onOff" ng-model="onOff" on="on" off="off"></switch>
+    <switch name="onOff" ng-model="onOff" on="on" off="off" class="red"></switch>
      <p>
         <button ng-click="onOff=!onOff">Toggle</button>
     </p>
@@ -30,7 +30,7 @@
     </p>
 
     <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
-    <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
+    <switch name="yesNo" ng-model="yesNo" class="blue" on="lorem" off="ipsum"></switch>
      <p>
         <button ng-click="onOff=!onOff">Toggle</button>
     </p>
@@ -46,6 +46,45 @@
     <p>
         Enabled: {{ disabled }}
     </p>
+
+	<switch ng-init="enabled=true" ng-model="enabled" class="primary"></switch>
+	<switch ng-model="enabled" class="info"></switch>
+	<switch ng-model="enabled" class="success"></switch>
+	<switch ng-model="enabled" class="warning"></switch>
+	<switch ng-model="enabled" class="danger"></switch>
+	<div class="clearfix"></div>
+	<switch ng-model="enabled" class="md primary"></switch>
+	<switch ng-model="enabled" class="md info"></switch>
+	<switch ng-model="enabled" class="md success"></switch>
+	<switch ng-model="enabled" class="md warning"></switch>
+	<switch ng-model="enabled" class="md danger"></switch>
+  <div class="clearfix"></div>
+	<switch disabled="true" ng-model="enabled" class="md primary"></switch>
+	<switch disabled="true" ng-model="enabled" class="md info"></switch>
+	<switch disabled="true" ng-model="enabled" class="md success"></switch>
+	<switch disabled="true" ng-model="enabled" class="md warning"></switch>
+	<switch disabled="true" ng-model="enabled" class="md danger"></switch>
+  <div class="clearfix"></div>
+	<br>
+	<br>
+	<div class="clearfix"></div>
+	<switch ng-model="enabled" on="ON" class="primary"></switch>
+	<switch ng-model="enabled" on="ON" class="info"></switch>
+	<switch ng-model="enabled" on="ON" class="success"></switch>
+	<switch ng-model="enabled" on="ON" class="warning"></switch>
+	<switch ng-model="enabled" on="ON" class="danger"></switch>
+	<div class="clearfix"></div>
+	<switch ng-model="enabled" on="ON" class="md primary"></switch>
+	<switch ng-model="enabled" on="ON" class="md info"></switch>
+	<switch ng-model="enabled" on="ON" class="md success"></switch>
+	<switch ng-model="enabled" on="ON" class="md warning"></switch>
+	<switch ng-model="enabled" on="ON" class="md danger"></switch>
+	<div class="clearfix"></div>
+	<switch disabled="true" ng-model="enabled" on="ON" class="md primary"></switch>
+	<switch disabled="true" ng-model="enabled" on="ON" class="md info"></switch>
+	<switch disabled="true" ng-model="enabled" on="ON" class="md success"></switch>
+	<switch disabled="true" ng-model="enabled" on="ON" class="md warning"></switch>
+	<switch disabled="true" ng-model="enabled" on="ON" class="md danger"></switch>
   </form>
 
 </body>
