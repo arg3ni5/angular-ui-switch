@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/xpepermint/angular-ui-switch.git"
+    "url": "git://github.com/arg3ni5/angular-ui-switch.git"
   },
   "keywords": [
     "angular",
@@ -22,12 +22,12 @@
     "checkbox",
     "form"
   ],
-  "author": "xpeper <xpepermint@gmail.com>",
+  "author": "arg3ni5 <fb.arg3ni5@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xpepermint/angular-ui-switch/issues"
+    "url": "https://github.com/arg3ni5/angular-ui-switch/issues"
   },
-  "homepage": "https://github.com/xpepermint/angular-ui-switch",
+  "homepage": "https://github.com/arg3ni5/angular-ui-switch",
   "devDependencies": {
     "minify": "^1.0.4",
     "uglify-js": "^2.4.15"

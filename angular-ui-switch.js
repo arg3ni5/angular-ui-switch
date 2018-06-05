@@ -6,7 +6,7 @@ angular.module('uiSwitch', [])
   , replace: true
   , transclude: true
   , template: function(element, attrs) {
-      var wide = typeof(attrs.wide) == 'undefined' ? (attrs.off ? true : false) : attrs.wide;
+      var wide = typeof(attrs.wide) == 'undefined' ? (attrs.on || attrs.off ? true : false) : attrs.wide;
       var html = '';
       html += '<span';
       html +=   ' class="ui-switch' + (attrs.class ? ' ' + attrs.class : '') + '"';

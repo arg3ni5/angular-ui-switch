@@ -4,7 +4,7 @@ This is a simple iOS 7 style switch directive for AngularJS. You can use this mo
 
 Supported by all modern browsers: Chrome, Firefox, Opera, Safari, IE8+
 
-![YoomJS](https://raw.githubusercontent.com/xpepermint/angular-ui-switch/master/logo.png)
+![YoomJS](https://raw.githubusercontent.com/arg3ni5/angular-ui-switch/master/preview.png)
 
 Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular way.
 
@@ -44,7 +44,7 @@ Insert the switch in your html template.
 </form>
 ```
 
-Add optional on/off text
+Add optional on/off text, automatic change on wide state  when add on or off
 ```html
 <form>
   <switch id="enabled" name="enabled" ng-model="enabled" on="On" off="Off" class="green"></switch>
@@ -56,6 +56,25 @@ Disabled state
 ```html
 <form>
   <switch id="enabled" name="enabled" ng-model="enabled" disabled="true" class="green"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
+Wide state
+```html
+<form>
+  <switch id="enabled" name="enabled" ng-model="enabled" wide="true" class="green"></switch>
+  <br>{{ enabled }}
+</form>
+```
+bootstrap class
+```html
+<form>
+  <switch ng-model="enabled" wide="true" class="primary"></switch>
+  <switch ng-model="enabled" wide="true" class="info"></switch>
+  <switch ng-model="enabled" wide="true" class="success"></switch>
+  <switch ng-model="enabled" wide="true" class="warning"></switch>
+  <switch ng-model="enabled" wide="true" class="danger"></switch>
   <br>{{ enabled }}
 </form>
 ```
