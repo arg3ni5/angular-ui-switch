@@ -74,6 +74,9 @@
 .ui-switch.checked small {
   left: 22px;
 }
+.ui-switch.md.checked small {
+  left:29px;
+}
 /*wider switch text moves small further to the right*/
 .ui-switch.wide.checked small {
   left:50px;
