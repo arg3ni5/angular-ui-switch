@@ -1,5 +1,5 @@
-.switch {
-  background: #fff;
+.ui-switch {
+  background: #ccc;
   border: 1px solid #dfdfdf;
   position: relative;
   display: inline-block;
@@ -10,17 +10,20 @@
   padding: 0px;
   margin: 0px;
   border-radius: 20px;
-  cursor: pointer;
+  cursor: pointer !important;
   box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset;
   transition: 0.3s ease-out all;
   -webkit-transition: 0.3s ease-out all;
   top: -1px;
 }
 /*adding a wide width for larger switch text*/
-.switch.wide {
+.ui-switch.wide {
   width:80px;
 }
-.switch small {
+.ui-switch.md {
+	height: 23px;
+}
+.ui-switch small {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
@@ -32,51 +35,89 @@
   transition: 0.3s ease-out all;
   -webkit-transition: 0.3s ease-out all;
 }
-.switch.checked {
+.ui-switch.md small {
+  height: 23px;
+  width: 23px;
+}
+.ui-switch.checked {
   background: rgb(100, 189, 99);
   border-color: rgb(100, 189, 99);
 }
-.switch.checked small {
+.ui-switch.checked.blue {
+  background: rgb(55,178,238);
+  border-color: rgb(55,178,238);
+}
+.ui-switch.checked.red {
+  background: rgb(217,62,62);
+  border-color: rgb(217,62,62);
+}
+.ui-switch.checked.primary {
+  background: #337ab7;
+  border-color: #2e6da4;
+}
+.ui-switch.checked.success {
+  background: #5cb85c;
+  border-color: #4cae4c;
+}
+.ui-switch.checked.info {
+  background: #5bc0de;
+  border-color: #46b8da;
+}
+.ui-switch.checked.danger {
+  background: #d9534f;
+  border-color: #d43f3a;
+}
+.ui-switch.checked.warning {
+  background: #f0ad4e;
+  border-color: #eea236;
+}
+.ui-switch.checked small {
   left: 22px;
 }
 /*wider switch text moves small further to the right*/
-.switch.wide.checked small {
-  left:52px;
+.ui-switch.wide.checked small {
+  left:50px;
+}
+.ui-switch.md.wide.checked small {
+  left:57px;
 }
 /*styles for switch-text*/
-.switch .switch-text {
+.ui-switch .ui-switch-text {
   font-family:Arial, Helvetica, sans-serif;
   font-size:13px;
 }
 
-.switch .off {
+.ui-switch .off {
   display:block;
   position: absolute;
   right: 10%;
   top: 25%;
   z-index: 0;
-  color:#A9A9A9;
 }
 
-.switch .on {
+.ui-switch .on {
   display:none;
    z-index: 0;
   color:#fff;
   position: absolute;
   top: 25%;
+  vertical-align: middle !important;
   left: 9%;
 }
+.ui-switch.md .on,.ui-switch.md .off{
+  top: 17%;
+}
 
-.switch.checked .off {
+.ui-switch.checked .off {
   display:none;
 }
 
-.switch.checked .on {
+.ui-switch.checked .on {
   display:block;
 
 }
 
-.switch.disabled {
+.ui-switch.disabled {
   opacity: .50;
   cursor: not-allowed;
 }
